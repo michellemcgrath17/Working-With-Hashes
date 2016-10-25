@@ -6,7 +6,9 @@
 <select>
   <% @states.each do | shash | %>
 
-  <option value= "<%= shash[:id] %>" > <%= shash[:name] %> </option>
+  <option value= "<%= shash[:id] %>" <% if shash[:id]=="NC" %> selected="selected" <%end%>> <%= shash[:name] %> </option>
+  <!--<option value= "<%= shash[:id] %>" "<% if shash[:id]=="NC" %>" selected='true' "<%end%>"> <%= shash[:name] %> </option>-->
+  <!--<option value= "<%= shash[:id] %>" selected='true'> <%= shash[:name] %> </option>-->
     <% end %>
 
 </select>
